@@ -23,55 +23,56 @@ public final class R {
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
         public static final int preview=0x7f020001;
-        public static final int refresh=0x7f020002;
-        public static final int weather_1=0x7f020003;
-        public static final int weather_11=0x7f020004;
-        public static final int weather_12=0x7f020005;
-        public static final int weather_13=0x7f020006;
-        public static final int weather_14=0x7f020007;
-        public static final int weather_15=0x7f020008;
-        public static final int weather_16=0x7f020009;
-        public static final int weather_17=0x7f02000a;
-        public static final int weather_18=0x7f02000b;
-        public static final int weather_19=0x7f02000c;
-        public static final int weather_2=0x7f02000d;
-        public static final int weather_20=0x7f02000e;
-        public static final int weather_21=0x7f02000f;
-        public static final int weather_22=0x7f020010;
-        public static final int weather_23=0x7f020011;
-        public static final int weather_24=0x7f020012;
-        public static final int weather_25=0x7f020013;
-        public static final int weather_26=0x7f020014;
-        public static final int weather_29=0x7f020015;
-        public static final int weather_3=0x7f020016;
-        public static final int weather_30=0x7f020017;
-        public static final int weather_31=0x7f020018;
-        public static final int weather_32=0x7f020019;
-        public static final int weather_33=0x7f02001a;
-        public static final int weather_34=0x7f02001b;
-        public static final int weather_35=0x7f02001c;
-        public static final int weather_36=0x7f02001d;
-        public static final int weather_37=0x7f02001e;
-        public static final int weather_38=0x7f02001f;
-        public static final int weather_39=0x7f020020;
-        public static final int weather_4=0x7f020021;
-        public static final int weather_40=0x7f020022;
-        public static final int weather_41=0x7f020023;
-        public static final int weather_42=0x7f020024;
-        public static final int weather_43=0x7f020025;
-        public static final int weather_44=0x7f020026;
-        public static final int weather_5=0x7f020027;
-        public static final int weather_6=0x7f020028;
-        public static final int weather_7=0x7f020029;
-        public static final int weather_8=0x7f02002a;
+        public static final int preview_not_available=0x7f020002;
+        public static final int refresh=0x7f020003;
+        public static final int weather_clear=0x7f020004;
+        public static final int weather_cloudy=0x7f020005;
+        public static final int weather_cold=0x7f020006;
+        public static final int weather_dreary=0x7f020007;
+        public static final int weather_flurries=0x7f020008;
+        public static final int weather_foggy=0x7f020009;
+        public static final int weather_freezing_rain=0x7f02000a;
+        public static final int weather_haze=0x7f02000b;
+        public static final int weather_haze_night=0x7f02000c;
+        public static final int weather_hot=0x7f02000d;
+        public static final int weather_ice=0x7f02000e;
+        public static final int weather_intermittent_clouds=0x7f02000f;
+        public static final int weather_intermittent_clouds_night=0x7f020010;
+        public static final int weather_mostly_clear_night=0x7f020011;
+        public static final int weather_mostly_cloudey_night=0x7f020012;
+        public static final int weather_mostly_cloudy=0x7f020013;
+        public static final int weather_mostly_cloudy_with_flurries=0x7f020014;
+        public static final int weather_mostly_cloudy_with_showers=0x7f020015;
+        public static final int weather_mostly_cloudy_with_showers_night=0x7f020016;
+        public static final int weather_mostly_cloudy_with_snow=0x7f020017;
+        public static final int weather_mostly_cloudy_with_thunder=0x7f020018;
+        public static final int weather_mostly_cloudy_with_thunder_showers_night=0x7f020019;
+        public static final int weather_mostly_sunny=0x7f02001a;
+        public static final int weather_partly_cloudy_night=0x7f02001b;
+        public static final int weather_partly_cloudy_with_flurries_night=0x7f02001c;
+        public static final int weather_partly_cloudy_with_showers_night=0x7f02001d;
+        public static final int weather_partly_cloudy_with_snow_night=0x7f02001e;
+        public static final int weather_partly_cloudy_with_thunder_showers_night=0x7f02001f;
+        public static final int weather_partly_sunny=0x7f020020;
+        public static final int weather_partly_sunny_with_flurries=0x7f020021;
+        public static final int weather_partly_sunny_with_showers=0x7f020022;
+        public static final int weather_partly_sunny_with_thunder=0x7f020023;
+        public static final int weather_rain=0x7f020024;
+        public static final int weather_rain_and_snow_mix=0x7f020025;
+        public static final int weather_showers=0x7f020026;
+        public static final int weather_sleet=0x7f020027;
+        public static final int weather_snow=0x7f020028;
+        public static final int weather_sunny=0x7f020029;
+        public static final int weather_thunderstorms=0x7f02002a;
+        public static final int weather_windy=0x7f02002b;
     }
     public static final class id {
         public static final int action_settings=0x7f080002;
-        public static final int button1=0x7f080001;
-        public static final int textView1=0x7f080000;
+        public static final int installTheme=0x7f080001;
+        public static final int theme_preview=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int theme_installer=0x7f030000;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -80,6 +81,9 @@ public final class R {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
+        public static final int install_button=0x7f050003;
+        public static final int installing_title=0x7f050004;
+        public static final int installint_details=0x7f050005;
     }
     public static final class style {
         /** 
