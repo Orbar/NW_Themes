@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Theme>
+	<ThemeName>Sense 7</ThemeName>
+	<Package>com.orbar.nwSense5theme</Package>
+	<ThemeVersion>2</ThemeVersion>
+	<AllowIconColorFilter>True</AllowIconColorFilter>
+	<RefreshIcon>True</RefreshIcon>
+	<PrimaryColor>FF0000</PrimaryColor>
+	<SecondaryColor>00FFFF</SecondaryColor>
+</Theme>
