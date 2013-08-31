@@ -35,7 +35,7 @@ public static final String TAG = "ThemeInstaller";
 	
 	private static Context mContext;
 	
-	public static void installTheme(Context context) {
+	public static void installTheme(Context context, int previewResourceId, int refreshResourceId) {
 		
 		mContext = context;
 		
@@ -91,9 +91,11 @@ public static final String TAG = "ThemeInstaller";
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_mostly_cloudy_with_thunder_showers_night),
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_partly_cloudy_with_flurries_night),
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_partly_cloudy_with_snow_night),
-				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.preview),
-				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.refresh),
+				BitmapFactory.decodeResource( mContext.getResources(), previewResourceId),
+				BitmapFactory.decodeResource( mContext.getResources(), refreshResourceId),
 			};
+		
+		
 		
 		/*
 		 * These are the actual file names that Notification Weather Pro will use to 
@@ -157,14 +159,19 @@ public static final String TAG = "ThemeInstaller";
 		
 			
 			for (int i = 0; i < originalIcons.length; i++) {
-				File file = new File(extStorageDirectory, fileNames[i] + ".png");
+				if (originalIcons[i] != null){
 				
-				outStream = new FileOutputStream(file);
-			
-			    originalIcons[i].compress(Bitmap.CompressFormat.PNG, 100, outStream);
-			    
-			    outStream.flush();
-			    outStream.close();
+					File file = new File(extStorageDirectory, fileNames[i] + ".png");
+					
+					outStream = new FileOutputStream(file);
+				
+				    originalIcons[i].compress(Bitmap.CompressFormat.PNG, 100, outStream);
+				    
+				    outStream.flush();
+				    outStream.close();
+				} else {
+					Log.i("null check", "icon " + i + " was null");
+				}
 			}
 			
 			//write the xml file as well	

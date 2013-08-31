@@ -18,6 +18,9 @@ public class MainActivity extends Activity {
     
     boolean hasPreview = false;
 	
+    int previewResourceId = 0;
+    int refreshResourceId = 0;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,7 +32,6 @@ public class MainActivity extends Activity {
 		 *  If yes, get it's resource ID
 		 */
 		
-		int previewResourceId = 0;
 		try {
 	        previewResourceId = getResources().getIdentifier("preview", "drawable", getPackageName());
 	        if (previewResourceId != 0) setHasPreview(true);
@@ -37,8 +39,21 @@ public class MainActivity extends Activity {
 
 	    catch(Exception e) {
 	    	setHasPreview(false);
+	    	previewResourceId = 0;
 	    }
 		
+		/*
+		 *  Check if refresh drawable is supplied.
+		 *  If yes, get it's resource ID
+		 */
+		
+		try {
+	        refreshResourceId = getResources().getIdentifier("refresh", "drawable", getPackageName());
+	    }
+
+	    catch(Exception e) {
+	    	refreshResourceId = 0;
+	    }
 	    
 		// Assign the preview resouce or the preview not availiable resouce to the preview imageView
 	    ImageView previewImage = (ImageView) findViewById(R.id.theme_preview);
@@ -57,7 +72,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				//start the install theme method in the background thread
-				new installTheme().execute();
+				new installTheme().execute(getPreviewResourceId(), getRefreshResourceId());
 			}
 			
 		});
@@ -72,17 +87,18 @@ public class MainActivity extends Activity {
 	}
 
 	
-	private class installTheme extends AsyncTask<Void, Void, String> {
+	private class installTheme extends AsyncTask<Integer, Void, String> {
 
         @Override
-        protected String doInBackground(Void... params) {
+        protected String doInBackground(Integer... params) {
         	//Install the theme
-        	ThemeInstaller.installTheme(getApplicationContext());
+        	ThemeInstaller.installTheme(getApplicationContext(), params[0], params[1]);
             
             return null;
         }        
 
-        @Override
+
+		@Override
         protected void onPostExecute(String result) {
         	// Dismiss the progress dialog
         	progressDialog.dismiss();
@@ -95,6 +111,9 @@ public class MainActivity extends Activity {
         			getApplicationContext().getResources().getString(R.string.installint_details), true, false);
            	
         }
+
+
+		
 
 	}
 
@@ -111,5 +130,35 @@ public class MainActivity extends Activity {
 	 */
 	public void setHasPreview(boolean hasPreview) {
 		this.hasPreview = hasPreview;
+	}
+
+	
+
+	/**
+	 * @return the previewResourceId
+	 */
+	public int getPreviewResourceId() {
+		return previewResourceId;
+	}
+
+	/**
+	 * @param previewResourceId the previewResourceId to set
+	 */
+	public void setPreviewResourceId(int previewResourceId) {
+		this.previewResourceId = previewResourceId;
+	}
+
+	/**
+	 * @return the refreshResourceId
+	 */
+	public int getRefreshResourceId() {
+		return refreshResourceId;
+	}
+
+	/**
+	 * @param refreshResourceId the refreshResourceId to set
+	 */
+	public void setRefreshResourceId(int refreshResourceId) {
+		this.refreshResourceId = refreshResourceId;
 	}
 }
