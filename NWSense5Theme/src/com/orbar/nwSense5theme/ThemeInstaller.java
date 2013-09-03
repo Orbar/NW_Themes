@@ -91,6 +91,7 @@ public static final String TAG = "ThemeInstaller";
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_mostly_cloudy_with_thunder_showers_night),
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_partly_cloudy_with_flurries_night),
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_partly_cloudy_with_snow_night),
+				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_na),
 				BitmapFactory.decodeResource( mContext.getResources(), previewResourceId),
 				BitmapFactory.decodeResource( mContext.getResources(), refreshResourceId),
 			};
@@ -144,6 +145,7 @@ public static final String TAG = "ThemeInstaller";
 				"weather_mostly_cloudy_with_thunder_showers_night",
 				"weather_partly_cloudy_with_flurries_night",
 				"weather_partly_cloudy_with_snow_night",
+				"weather_na",
 				"preview",
 				"refresh"
 				
