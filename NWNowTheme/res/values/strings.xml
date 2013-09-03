@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NW Now Theme</string>
+    
+    <string name="install_button">Install Now</string>
+    <string name="installing_title">Installing Theme</string>
+    <string name="installint_details">Installing now. This may take a few moments</string>
+    
+</resources>

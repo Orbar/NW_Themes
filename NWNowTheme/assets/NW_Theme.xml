@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Theme>
+	<ThemeName>NW Now</ThemeName>
+	<Package>com.orbar.nwnowtheme</Package>
+	<ThemeVersion>1</ThemeVersion>
+	<AllowIconColorFilter>false</AllowIconColorFilter>
+	<RefreshIcon>false</RefreshIcon>
+	<PrimaryColor>FFFFFF</PrimaryColor>
+	<SecondaryColor>BEBEBE</SecondaryColor>
+</Theme>
