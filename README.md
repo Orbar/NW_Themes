@@ -4,7 +4,7 @@ NW_Themes
 Sample Themes for Notification Weather Pro
 
 
-Important files
+Theme file
 ---------------
 
 
