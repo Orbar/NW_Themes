@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Theme>
 	<ThemeName>Sense 5</ThemeName>
-	<Package>com.orbar.nwSense5theme</Package>
+	<Package>com.orbar.nwsense5theme</Package>
 	<ThemeVersion>1</ThemeVersion>
 	<AllowIconColorFilter>True</AllowIconColorFilter>
 	<RefreshIcon>True</RefreshIcon>
