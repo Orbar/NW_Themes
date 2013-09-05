@@ -4,7 +4,7 @@
 	<Package>com.orbar.nwsense5theme</Package>
 	<ThemeVersion>1</ThemeVersion>
 	<AllowIconColorFilter>True</AllowIconColorFilter>
-	<RefreshIcon>True</RefreshIcon>
+	<RefreshIcon>false</RefreshIcon>
 	<PrimaryColor>FFFFFF</PrimaryColor>
 	<SecondaryColor>BEBEBE</SecondaryColor>
 </Theme>
