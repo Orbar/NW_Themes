@@ -4,7 +4,7 @@ NW_Themes
 Sample Themes for Notification Weather Pro
 
 
-Important files
+Theme file
 ---------------
 
 
@@ -15,7 +15,7 @@ Placed into the assets directory
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Theme>
-	<ThemeName>Sense 6</ThemeName>
+	<ThemeName>Sense 5</ThemeName>
 	<Package>com.orbar.nwSense5theme</Package>
 <ThemeVersion>2</ThemeVersion>
 	<AllowIconColorFilter>True</AllowIconColorFilter>
