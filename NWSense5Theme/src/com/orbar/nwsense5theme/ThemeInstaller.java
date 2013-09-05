@@ -1,4 +1,4 @@
-package com.orbar.nwSense5theme;
+package com.orbar.nwsense5theme;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

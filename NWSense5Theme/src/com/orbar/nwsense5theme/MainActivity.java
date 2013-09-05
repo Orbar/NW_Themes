@@ -1,4 +1,4 @@
-package com.orbar.nwSense5theme;
+package com.orbar.nwsense5theme;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
