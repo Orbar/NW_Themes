@@ -35,12 +35,12 @@ Placed into the assets directory
 Image Files
 -----------
 
-You should put all of your icons in the drawable-xhdpi directory. The code will automatically resize the icons for the device running it. You may put the code in the other drawable folder if you prefer.
+You should put all of your icons in the drawable-xhdpi directory. The code will automatically resize the icons for the device running it. You may put the code in the other drawable folders if you prefer, but you would have to adjust the icons sizes accordingly.
 
-The theme requires that you supply all 40 weather icons. however, if some of your icons are the same (such as ‘partly cloudy’ and ‘mostly cloudy’) you can supply 1 icon and refer to it twice in the originalIcons bitmap array inside of the themeInstaller class.
-This has the benefit of reducing the size of the download.
+The theme requires that you supply all 41 weather icons. however, if some of your icons are the same (such as ‘partly cloudy’ and ‘mostly cloudy’) you can supply 1 icon and refer to it twice in the originalIcons bitmap array inside of the themeInstaller class.
+This has the benefit of reducing the size of the download. (See NWNowTheme to see how this is done)
 
-If you would like to supply a preview image (and you should) and or a refresh icon, place them into the drawable-xhdpi directory. The code will detect if they are present and copy them if needed.
+If you would like to supply a preview image (and you should) and/or a refresh icon, place them into the drawable-xhdpi directory. The code will detect if they are present and copy them if needed.
 
 If you do not supply a preview image, a ‘Preview Unavailable' will be displayed instead).
 
@@ -69,3 +69,13 @@ Color filter
 ----------
 
 The color filter works by applying a filter on top of the original text or icon. For example if the original icon is white and the filter is red, then the icon will appear red. However, if your original icon is yellow, and the filter is blue, the icon will appear green and not blue. For this reason, if your icons are not monochromatic you should set AllowIconColorFilter to false.  
+
+ 
+Play Store Listing
+----------------------
+
+The Notification Weather's theme chooser button will search the Play Store for apps containing the term 'NWPT' for Notification Weather Pro theme.
+It is recommended to name your installer app something like 'NWPT {insert name}. eg. NWPT Sense 5, NWPT Now.
+
+
+Don't forget to make sure that the Package varialble in NW_Theme.xml matches the package in AndroidManifest. This will ensure that the user will be able to long press on the theme to open it in the play store and leave a comment/rating.
