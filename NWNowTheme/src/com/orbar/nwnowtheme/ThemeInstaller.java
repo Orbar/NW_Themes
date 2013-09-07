@@ -28,6 +28,8 @@ public static final String TAG = "ThemeInstaller";
 	
 	public static final String APP_DIRECTORY = "Notification Weather";
 	public static final String THEMES_DIRECTORY = "Themes";
+	public static final String THEME_FILE = "NW_Theme.xml";
+	public static final String NOMEDIA = ".nomedia";
 	
 	private static String themeName;
 	private static String primaryColor;
@@ -39,7 +41,7 @@ public static final String TAG = "ThemeInstaller";
 		
 		mContext = context;
 		
-		Document theme = convertStringToXMLDocument(mContext, getXml("NW_Theme.xml"));
+		Document theme = convertStringToXMLDocument(mContext, getXml(THEME_FILE));
 		
 		themeName = theme.getElementsByTagName("ThemeName").item(0).getTextContent();
 		primaryColor = theme.getElementsByTagName("PrimaryColor").item(0).getTextContent();
@@ -230,16 +232,7 @@ public static final String TAG = "ThemeInstaller";
 	
 	private static void copyAssets(String directory) {
 	    AssetManager assetManager = mContext.getAssets();
-	    String[] files = null;
-	    try {
-	        files = assetManager.list("");
-	    } catch (IOException e) {
-	        Log.e("tag", "Failed to get asset file list.", e);
-	    }
-	  
-	    for (String filename : files) {
-	    	Log.i(TAG, filename);
-	    }
+	    String[] files = {THEME_FILE};
 	    
 	    for(String filename : files) {
 	        InputStream in = null;
@@ -256,7 +249,17 @@ public static final String TAG = "ThemeInstaller";
 	          out = null;
 	        } catch(Exception e) {
 	            Log.e(TAG, "Failed to copy asset file: " + filename, e);
-	        }       
+	        }   
+	        
+	        // Make .nomedia file
+	        Log.i(TAG, directory+ "/" + NOMEDIA);
+	        File noMedia = new File(directory + File.separator + NOMEDIA);
+	        
+	        try {
+				noMedia.createNewFile();
+			} catch (IOException e) {
+				Log.e(TAG, "Failed to create no media file", e);
+			}
 	    }
 	}
 	
