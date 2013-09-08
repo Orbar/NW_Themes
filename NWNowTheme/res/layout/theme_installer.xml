@@ -19,12 +19,17 @@
         android:src="@drawable/preview" />
     
     <Button
-        android:id="@+id/installTheme"
+        android:id="@+id/hideFromLauncher"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/install_button" />
-
+        android:text="@string/hide_button" />
     
+    <Button
+        android:id="@+id/installTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/hideFromLauncher"
+        android:text="@string/install_button" />    
 
 </RelativeLayout>

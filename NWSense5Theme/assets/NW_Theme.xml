@@ -2,7 +2,7 @@
 <Theme>
 	<ThemeName>Sense 5</ThemeName>
 	<Package>com.orbar.nwsense5theme</Package>
-	<ThemeVersion>2</ThemeVersion>
+	<ThemeVersion>3</ThemeVersion>
 	<AllowIconColorFilter>True</AllowIconColorFilter>
 	<RefreshIcon>false</RefreshIcon>
 	<PrimaryColor>FFFFFF</PrimaryColor>

@@ -3,7 +3,11 @@ package com.orbar.nwnowtheme;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,6 +24,8 @@ public class MainActivity extends Activity {
 	
     int previewResourceId = 0;
     int refreshResourceId = 0;
+	
+    final Context context = this;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +82,48 @@ public class MainActivity extends Activity {
 			}
 			
 		});
+
+		// Setup the button listener
+	    Button hideButton = (Button) findViewById(R.id.hideFromLauncher);
 		
+	    hideButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+						context);
+		 
+					// set title
+					alertDialogBuilder.setTitle(R.string.hide_button);
+		 
+					// set dialog message
+					alertDialogBuilder
+						.setMessage(R.string.hide_warning)
+						.setCancelable(false)
+						.setPositiveButton(android.R.string.yes,new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,int id) {
+								//Hide the launcher from the drawer
+								PackageManager p = getPackageManager();
+								p.setComponentEnabledSetting(getComponentName(), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+							
+							}
+						  })
+						.setNegativeButton(android.R.string.no,new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,int id) {
+								// if this button is clicked, just close
+								// the dialog box and do nothing
+								dialog.cancel();
+							}
+						});
+		 
+						// create alert dialog
+						AlertDialog alertDialog = alertDialogBuilder.create();
+		 
+						// show it
+						alertDialog.show();
+					}
+				});
+				
 	}
 
 	private class installTheme extends AsyncTask<Integer, Void, String> {
