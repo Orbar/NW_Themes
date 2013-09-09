@@ -17,9 +17,10 @@ Placed into the assets directory
 <Theme>
 	<ThemeName>Sense 5</ThemeName>
 	<Package>com.orbar.nwSense5theme</Package>
-<ThemeVersion>2</ThemeVersion>
+	<ThemeVersion>2</ThemeVersion>
 	<AllowIconColorFilter>True</AllowIconColorFilter>
 	<RefreshIcon>True</RefreshIcon>
+	<AllowRefreshIconColorFilter>True</AllowRefreshIconColorFilter>
 	<PrimaryColor>FFFFFF</PrimaryColor>
 	<SecondaryColor>BEBEBE</SecondaryColor>
 </Theme>
@@ -30,6 +31,7 @@ Placed into the assets directory
 * ThemeVersion (required) - The version number of the theme. Appears in the top right of the theme card. Serves no functional purpose
 * AllowIconColorFilter (optional) - False if omitted. Determins if to allow to pass icon through a color filter. useful for black and white icons, such as the default theme
 * RefreshIcon (optional) - False if omitted. False means that theme will use the default refresh icon. True means it will use a supplied refresh image
+* AllowRefreshIconColorFilter (optional) - True if omitted. Determins if to allow to pass refresh icon through a color filter. useful for black and white icons, such as the default theme
 * PrimaryColor and SecondayColor (required) - Used to apply color filters to the texts and icons. See below for a more detailed explanation.
 
 Image Files
