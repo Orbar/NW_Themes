@@ -56,6 +56,13 @@ If you would like to supply a preview image (and you should) and/or a refresh ic
 
 If you do not supply a preview image, a ‘Preview Unavailable' will be displayed instead).
 
+If you would like to add a background images to your theme, all you have to do is include them in your project. There are 2 background images used: 
+
+backgroud.png - used as the background of the notification when not using the 4-day forecast.
+
+backgroud_extended.png - used as the background of the notification when using the 4-day forecast.
+
+If you would like to keep the default (transparent) background just delete the background/background_extended images from the drawable-xhdpi folder. 
 
 
 Icon Sizes
@@ -73,6 +80,12 @@ Icon Sizes
   </tr>
   <tr>
     <td>Weather Icons</td><td>190x152 px</td><td>4-5 px</td>
+  </tr>
+  <tr>
+    <td>background.png</td><td>720x162 px</td><td>0 px</td>
+  </tr>
+  <tr>
+    <td>background_extended.png</td><td>720x310 px</td><td>0 px</td>
   </tr>
 </table>
 
