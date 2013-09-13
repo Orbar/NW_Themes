@@ -37,7 +37,7 @@ public static final String TAG = "ThemeInstaller";
 	
 	private static Context mContext;
 	
-	public static void installTheme(Context context, int previewResourceId, int refreshResourceId) {
+	public static void installTheme(Context context, int previewResourceId, int refreshResourceId, int backgroundResourceId, int backgroundExtendedResourceId) {
 		
 		mContext = context;
 		
@@ -97,6 +97,8 @@ public static final String TAG = "ThemeInstaller";
 				BitmapFactory.decodeResource( mContext.getResources(), R.drawable.weather_na),
 				BitmapFactory.decodeResource( mContext.getResources(), previewResourceId),
 				BitmapFactory.decodeResource( mContext.getResources(), refreshResourceId),
+				BitmapFactory.decodeResource( mContext.getResources(), backgroundResourceId),
+				BitmapFactory.decodeResource( mContext.getResources(), backgroundExtendedResourceId),
 			};
 		
 		
@@ -151,7 +153,9 @@ public static final String TAG = "ThemeInstaller";
 				"weather_tornado",
 				"weather_na",
 				"preview",
-				"refresh"
+				"refresh",
+				"background",
+				"background_extended"
 				
 		};
 		

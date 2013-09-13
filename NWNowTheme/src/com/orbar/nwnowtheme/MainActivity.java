@@ -8,7 +8,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -24,6 +23,8 @@ public class MainActivity extends Activity {
 	
     int previewResourceId = 0;
     int refreshResourceId = 0;
+    int backgroundResourceId = 0;
+    int backgroundExtendedResourceId = 0;
 	
     final Context context = this;
 	
@@ -61,6 +62,32 @@ public class MainActivity extends Activity {
 	    	refreshResourceId = 0;
 	    }
 	    
+		/*
+		 *  Check if background drawable is supplied.
+		 *  If yes, get it's resource ID
+		 */
+		
+		try {
+			backgroundResourceId = getResources().getIdentifier("background", "drawable", getPackageName());
+	    }
+
+	    catch(Exception e) {
+	    	backgroundResourceId = 0;
+	    }
+		
+		/*
+		 *  Check if background extended drawable is supplied.
+		 *  If yes, get it's resource ID
+		 */
+		
+		try {
+			backgroundExtendedResourceId = getResources().getIdentifier("background_extended", "drawable", getPackageName());
+	    }
+
+	    catch(Exception e) {
+	    	backgroundExtendedResourceId = 0;
+	    }
+		
 		// Assign the preview resouce or the preview not availiable resouce to the preview imageView
 	    ImageView previewImage = (ImageView) findViewById(R.id.theme_preview);
 		
@@ -78,7 +105,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				//start the install theme method in the background thread
-				new installTheme().execute(getPreviewResourceId(), getRefreshResourceId());
+				new installTheme().execute(getPreviewResourceId(), getRefreshResourceId(), getBackgroundResourceId(), getBackgroundExtendedResourceId());
 			}
 			
 		});
@@ -131,7 +158,7 @@ public class MainActivity extends Activity {
         @Override
         protected String doInBackground(Integer... params) {
         	//Install the theme
-        	ThemeInstaller.installTheme(getApplicationContext(), params[0], params[1]);
+        	ThemeInstaller.installTheme(getApplicationContext(), params[0], params[1], params[2], params[3]);
             
             return null;
         }        
@@ -199,5 +226,33 @@ public class MainActivity extends Activity {
 	 */
 	public void setRefreshResourceId(int refreshResourceId) {
 		this.refreshResourceId = refreshResourceId;
+	}
+
+	/**
+	 * @return the backgroundResourceId
+	 */
+	public int getBackgroundResourceId() {
+		return backgroundResourceId;
+	}
+
+	/**
+	 * @param backgroundResourceId the backgroundResourceId to set
+	 */
+	public void setBackgroundResourceId(int backgroundResourceId) {
+		this.backgroundResourceId = backgroundResourceId;
+	}
+
+	/**
+	 * @return the backgroundExtendedResourceId
+	 */
+	public int getBackgroundExtendedResourceId() {
+		return backgroundExtendedResourceId;
+	}
+
+	/**
+	 * @param backgroundExtendedResourceId the backgroundExtendedResourceId to set
+	 */
+	public void setBackgroundExtendedResourceId(int backgroundExtendedResourceId) {
+		this.backgroundExtendedResourceId = backgroundExtendedResourceId;
 	}
 }
