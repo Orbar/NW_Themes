@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NW Now White Theme</string>
+    
+    <string name="install_button">Install Now</string>
+    <string name="installing_title">Installing Theme</string>
+    <string name="installint_details">Installing now. This may take a few moments</string>
+    
+    <string name="hide_button">Hide From App Drawer</string>
+    <string name="hide_warning">Are you sure you want to hide the theme from app launcher. This cannot be undone</string>
+    
+</resources>

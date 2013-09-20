@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Theme>
+	<ThemeName>NW Now White</ThemeName>
+	<Package>com.orbar.nwnowwhitetheme</Package>
+	<ThemeVersion>1</ThemeVersion>
+	<AllowIconColorFilter>false</AllowIconColorFilter>
+	<RefreshIcon>false</RefreshIcon>
+	<AllowRefreshIconColorFilter>True</AllowRefreshIconColorFilter>
+	<PrimaryColor>000000</PrimaryColor>
+	<SecondaryColor>737373</SecondaryColor>
+</Theme>
